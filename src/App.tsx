@@ -48,45 +48,45 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-200 via-orange-300 to-red-400 flex items-center justify-center p-6">
-      <div className="relative bg-white bg-opacity-90 rounded-2xl shadow-xl p-8 max-w-lg w-full transform transition-all hover:scale-105">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 flex items-center justify-center p-4 sm:p-6">
+      <div className="relative bg-white bg-opacity-90 rounded-2xl shadow-2xl p-6 sm:p-8 max-w-lg w-full transform transition-all hover:scale-105">
         {/* Decorative Top Border */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-amber-500 to-red-600 rounded-t-2xl"></div>
+        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-500 to-red-600 rounded-t-2xl"></div>
 
         {/* Title with Improved Typography */}
         <h1
-          className="text-5xl font-extrabold text-center text-amber-900 mb-10 tracking-tight"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-amber-900 mb-6 sm:mb-8 tracking-tight"
           style={{
             fontFamily: "'Khmer', serif",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.15)",
           }}
         >
           Sol marn ngai tt reh save luy pong
           <br />
-          <span className="text-2xl text-red-700 font-semibold">
+          <span className="text-xl sm:text-2xl lg:text-3xl text-red-700 font-semibold">
             Countdown Banh Terk Tov SR
           </span>
         </h1>
 
-        {/* Countdown Grid with Animation */}
-        <div className="grid grid-cols-4 gap-6 text-center">
+        {/* Countdown Grid with Centered Numbers */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
           {countdownItems.map((item) => (
             <div
               key={item.label}
-              className="bg-amber-100 rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-amber-100 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 flex flex-col items-center justify-center"
             >
-              <div className="text-5xl font-bold text-amber-800 animate-pulse-slow">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 flex items-center justify-center">
                 {item.value.toString().padStart(2, "0")}
               </div>
-              <div className="text-sm text-red-600 mt-3 font-medium">
+              <div className="text-sm sm:text-base lg:text-lg text-red-600 mt-2 sm:mt-3 font-medium">
                 {item.label}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Target Date with Subtle Background */}
-        <p className="text-center text-amber-800 mt-8 bg-amber-50 py-2 px-4 rounded-lg text-lg">
+        {/* Target Date with Centered Text */}
+        <p className="text-center text-amber-800 mt-6 sm:mt-8 bg-amber-50 py-2 px-4 rounded-lg text-lg sm:text-xl">
           គោលដៅ:{" "}
           <span className="font-semibold">ថ្ងៃទី ១៣ ខែមេសា ឆ្នាំ២០២៥</span>
           <br />
@@ -94,7 +94,7 @@ const App: React.FC = () => {
         </p>
 
         {/* Footer with Gradient Text */}
-        <div className="mt-10 text-center text-sm bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-red-600">
+        <div className="mt-6 sm:mt-8 text-center text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-red-600">
           ngai 14 ma larn tt Bart rkun
         </div>
       </div>
